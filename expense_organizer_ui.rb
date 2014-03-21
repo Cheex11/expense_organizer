@@ -48,6 +48,14 @@ def add_expense_ui
   new_expense = Expense.create({:amount => amount, :description => description, :date => date})
 #  binding.pry
   puts "Expense has been saved to the database!"
+  # ATTENTION! We started to do this but ran out of time!
+  # Need to create join files first
+  # puts "Please type a category to assign this expense to:"
+  # chosen_category = gets.chomp
+  # Category.all each do |category|
+  #   if category.cat_name == chosen_category
+
+
   gets.chomp
   main_menu
 end

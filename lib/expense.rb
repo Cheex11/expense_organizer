@@ -15,7 +15,8 @@ class Expense
       description = result['description']
       amount = result['amount'].to_f
       date =  result['date']
-      @expenses << Expense.new({:amount => amount, :description => description, :date => date})
+      id = result['id'].to_i
+      @expenses << Expense.new({:amount => amount, :description => description, :date => date, :id => id})
     end
     @expenses
   end
