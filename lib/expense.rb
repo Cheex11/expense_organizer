@@ -21,7 +21,7 @@ class Expense
   end
 
   def save
-    result = DB.exec("INSERT INTO expenses (description, amount, date) VALUES ('#{@description}', '#{@amount}', '#{@date}') RETURNING id;")
+    result = DB.exec("INSERT INTO expenses (amount, description, date) VALUES ('#{@amount}', '#{@description}', '#{@date}') RETURNING id;")
     @id = result.first['id'].to_i
   end
 
